@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.4;
+  background-color: rgb(110, 12, 34);
+  color: #fff;
+}
+
+h1 span {
+  color: rgb(10, 10, 88);
+  font-size: 1.8rem;
+}
+
+h1 .fa-book {
+  color: rgb(170, 33, 33);
+  margin-right: 10px;
+}
+.page {
+  max-width: 50%;
+  margin: 50px auto 0;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+/* Form */
+#todoForm {
+  width: 89%;
+  margin: 50px 0;
+
+  position: relative;
+}
+
+#todo {
+  margin-right: 15px;
+  padding: 0.5rem;
+  width: 50%;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn {
+  padding: 8px;
+  display: inline-block;
+  width: 12%;
+  text-align: center;
+  background-color: #fff;
+  border: none;
+}
+
+/* Todo Wrapper  */
+.todo_wrapper {
+  padding: 2em;
+}
+.list_header {
+  margin-bottom: 30px;
+  padding: 15px;
+  font-size: 22px;
+  font-weight: 300;
+  border: 1px solid #fff;
+}
+
+.list_header .fa-tasks {
+  display: inline-block;
+  margin-right: 10px;
+  color: #d43e08;
+}
+.todo_list {
+  list-style: none;
+  min-width: 30%;
+}
+
+.todo_wrapper,
+.list_header,
+.todo,
+.btn {
+  /* border: 1px solid #000; */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo {
+  padding: 10px;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d43e08;
+}
+
+.item_list {
+  flex: 1;
+  cursor: pointer;
+}
+
+button {
+  margin-right: 5px;
+  padding: 15px;
+  cursor: pointer;
+  border: none;
+}
+
+.delete-btn,
+.check-btn {
+  background-color: #ff4500;
+  color: white;
+  display: block;
+}
+
+.check-btn {
+  background-color: #37924b;
+}
+
+/* Make the icon unclikable */
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.checked {
+  color: #37924b;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* Style the select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: #fff;
+
+  width: 10rem;
+  cursor: pointer;
+  background-color: #1b075a;
+  padding: 1rem;
+  float: right;
+  position: relative;
+  top: 0;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background-color: #ff6f47;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+}
+
+.select:hover::after {
+  background-color: rgb(73, 26, 26);
+  color: #ff6f47;
+}
+
+/* warning */
+.warning,
+.added,
+.deleted {
+  background-color: red;
+  color: #fff;
+  width: 50%;
+  padding: 1rem;
+  margin-bottom: 15px;
+  border-radius: 14px;
+}
+
+.added {
+  background-color: #0f0;
+}
+
+.deleted {
+  background-color: #00f;
+}
+@media screen and (max-width: 560px) {
+  .page {
+    width: 100%;
+  }
+
+  .todoForm {
+    width: 80%;
+    display: static;
+    /* flex-flow: column wrap; */
+  }
+
+  #todo {
+    width: 100%;
+    display: block;
+    margin: 15px 0;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+  }
+
+  .select select {
+    width: 100%;
+    display: block;
+    /* margin-bottom: 20px; */
+  }
+
+  .todo_wrapper {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
